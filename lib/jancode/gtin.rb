@@ -9,7 +9,7 @@ module Jancode
 
     def check_digit
       validation
-      val = ((sum_even_numbers * 3) + sum_odd_numbers).to_s[-1].to_i
+      val = ((sum_numbers(:even) * 3) + sum_numbers(:odd)).to_s[-1].to_i
       val == 0 ? 0 : 10 - val
     end
 
@@ -18,18 +18,21 @@ module Jancode
     end
 
     private
-    def sum_even_numbers
-      code = code_array.reverse
-      (0..(code.size - 1)).step(2).inject(0){|i,n| i += code[n].to_i}
-    end
+    def sum_numbers(type)
+      case type
+      when :even then start = 0
+      when :odd then start = 1
+      else
+        raise "Unknown type: #{type}"
+      end
 
-    def sum_odd_numbers
       code = code_array.reverse
-      (1..(code.size - 1)).step(2).inject(0){|i,n| i += code[n].to_i}
+      (start..(code.size - 1)).step(2).inject(0){|i,n| i += code[n].to_i}
     end
 
     def code_array
-      [@company_prefix, @item_code].join.chars
+      # [@company_prefix, @item_code].join.chars
+      [@company_prefix, @item_code].join.each_char.to_a
     end
   end
 end
