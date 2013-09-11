@@ -1,5 +1,6 @@
 # Jancode
 
+[![Gem Version](https://badge.fury.io/rb/jancode.png)](http://badge.fury.io/rb/jancode)
 [![Build Status](https://travis-ci.org/i2bskn/jancode.png?branch=master)](https://travis-ci.org/i2bskn/jancode)
 [![Coverage Status](https://coveralls.io/repos/i2bskn/jancode/badge.png?branch=master)](https://coveralls.io/r/i2bskn/jancode?branch=master)
 [![Code Climate](https://codeclimate.com/github/i2bskn/jancode.png)](https://codeclimate.com/github/i2bskn/jancode)
