@@ -1,5 +1,4 @@
 require "jancode/version"
-
-module Jancode
-  # Your code goes here...
-end
+require "jancode/gtin"
+require "jancode/gtin13"
+require "jancode/gtin8"
