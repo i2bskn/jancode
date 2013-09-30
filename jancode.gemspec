@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["i2bskn@gmail.com"]
   spec.description   = %q{Japanese Article Number}
   spec.summary       = %q{Japanese Article Number}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/i2bskn/jancode"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
