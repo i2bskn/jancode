@@ -23,6 +23,30 @@ Or install it yourself as:
 
 ## Usage
 
+Create japanese article number.
+
+```ruby
+require "jancode"
+
+gtin13 = Jancode.create("456995111617") # => #<Jancode::GTIN13:0x007fdb6314b950 @company_prefix="456995111", @item_code="618">
+gtin13.create # => "4569951116186"
+
+gtin8 = Jancode.create("4912345") # => #<Jancode::GTIN8:0x007fdb6126eaa0 @company_prefix="491234", @item_code="5">
+gtin8.create # => "49123456"
+```
+
+Verification japanese article number.
+
+```ruby
+require "jancode"
+
+Jancode.verification? "4569951116186" # => true
+Jancode.verification? "4569951116187" # => false
+
+Jancode.verification? "49123456" # => true
+Jancode.verification? "49123457" # => false
+```
+
 ### GTIN13
 
 ```ruby
